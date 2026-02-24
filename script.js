@@ -14,7 +14,7 @@ resetBtn.textContent ="Reset";
 resetBtn.style.display ="none";
 
 const verifyBtn = document.createElement("button");
-verifyBtn.is="verify";
+verifyBtn.id="verify";
 verifyBtn.textContent="Verify";
 
 const para= document.createElement("p");
@@ -76,10 +76,10 @@ verifyBtn.onclick = function () {
     const id2 = selected [1].dataset.id;
  
     if (id1 === id2) {
-        para.textContent ="You are a human . Congratulations!";
+        para.textContent ="You are a human. Congratulations!"
     }
     else {
-        para.textContent="We can't verify you as a human.You selected the non-identical tiles.";
+        para.textContent="We can't verify you as a human. You selected the non-identical tiles."
     }
     verifyBtn.style.display ="none";
 
@@ -92,6 +92,7 @@ resetBtn.onclick = function() {
     verifyBtn.style.display ="none";
     resetBtn.style.display="none";
     para.textContent="";
-
 generateTiles();
+
 }
+generateTiles();
